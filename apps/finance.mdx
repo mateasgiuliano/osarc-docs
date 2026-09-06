@@ -1,0 +1,27 @@
+---
+title: "Finance"
+description: "Cash in, by deal, by source, by period. Owner only."
+---
+
+Finance is the owner's view of money. It reads transactions as they arrive from Stripe and Revolut and matches each one to a deal.
+
+## What you see
+
+- **Cash collected** for the period, by closer, by product, by brand.
+- **Payments**: every transaction with payer, amount, method and the deal it belongs to.
+- **Renewals due**: deals reaching the end of their term.
+- **Forecast**: expected cash from instalments and renewals already agreed.
+
+## Matching payments
+
+A payment is matched to a deal by the expected amount and timing, not by who paid. A partner or parent paying on someone's behalf is normal and matches correctly.
+
+Payments that cannot be matched wait in a review list. Match them by hand from there.
+
+## One source of truth per period
+
+Historical revenue and live payment feeds cover different periods. Finance shows each period from its own source and never adds sources together, so totals are not double counted.
+
+<Warning>
+Finance is visible to the owner only. Managers see revenue in Sales, not the transaction level.
+</Warning>

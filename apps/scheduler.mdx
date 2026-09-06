@@ -1,0 +1,42 @@
+---
+title: "Scheduler"
+description: "Booking pages that land the call on the contact, assign the closer, block the calendar and send the reminders."
+---
+
+Scheduler is where leads book calls. A booking is not just a calendar slot. It creates or updates the contact, assigns the host as their closer, blocks the host's calendar, creates the Zoom link and schedules the reminders.
+
+## Tabs
+
+- **Events**: your booking types. A strategy call, a follow-up, a client check-in. Each has a name, a duration, hosts, questions and notifications.
+- **Applications**: everyone who started or finished the application for an event, with their answers, a grade and whether they booked.
+- **Availability**: working hours, buffers and limits per host.
+- **Hosts**: who can be booked, and for which events.
+
+## Create an event
+
+<Steps>
+  <Step title="New event">Open **Scheduler**, **Events**, then **New event**. Name it and set the duration.</Step>
+  <Step title="Location">Pick Zoom, phone or in person. With Zoom connected, each booking gets its own link.</Step>
+  <Step title="Questions">Ask what the closer needs before the call, or require a form built in [Forms](/apps/forms) before times are shown.</Step>
+  <Step title="Hosts and availability">Choose who takes these calls and when. Bookings go to the host who is free first.</Step>
+  <Step title="Notifications">Set the confirmation, the cancellation message and reminders by email, SMS or WhatsApp. Edit the timing and the wording here. Every send is logged, and you can send a test to yourself.</Step>
+  <Step title="Publish">The event gets a public link at `osarc.ai/schedule/your-slug`. Embed it on any page, including funnel pages.</Step>
+</Steps>
+
+## Applications and grading
+
+When an event requires an application, OSARC grades the answers from 1 to 3 as they come in. 3 means a strong fit. The grade shows in **Applications**, on the contact and on the appointment, so the closer knows before the call.
+
+A lead is created as soon as the phone number is entered, before the application is finished. Someone who drops off halfway still becomes a contact you can follow up.
+
+## Routing
+
+Bookings go to whoever is available first. Beyond that, you can set rules per event: by brand, by language, by team.
+
+## Changing a booking
+
+Leads reschedule or cancel from the link in their confirmation. The team reschedules, cancels or reassigns the host from **Appointments** in [Sales](/apps/sales). Reassigning hands the contact to the new closer.
+
+<Warning>
+Hosts must connect their calendar under **Integrations**, **Your accounts**. Without it, Scheduler cannot see meetings booked elsewhere and can double book. See [Calendars](/integrations/calendars).
+</Warning>
