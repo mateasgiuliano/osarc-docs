@@ -1,0 +1,77 @@
+---
+title: "Send and Automate Emails from Within OSARC"
+sidebarTitle: "Email"
+description: "OSARC's native email tool lets you send one-off emails or automated sequences. Every email links to the lead record, so opens and clicks appear in the full lead history."
+---
+
+OSARC includes a built-in email tool so you never need a separate email marketing platform for your call funnel sequences. Whether you're sending a booking confirmation, a no-show re-engagement, or a post-call follow-up, every email is sent from inside OSARC and recorded on the lead's record. That means your team sees the full picture — ad click, form submission, email opens, call outcome — in one place, without stitching together data from multiple tools.
+
+## Setting Up Your Sending Domain
+
+Before you send any emails, connect a verified sending domain so your messages land in the inbox rather than spam. OSARC guides you through the DNS setup step by step.
+
+<Steps>
+  <Step title="Open Sending Domains">
+    Go to **Settings → Email → Sending Domains**.
+  </Step>
+  <Step title="Add your domain">
+    Click **Add Domain** and enter the domain you want to send from (for example, `mail.yourbusiness.com`). Using a subdomain rather than your root domain is recommended to protect your main domain's sender reputation.
+  </Step>
+  <Step title="Copy the DNS records">
+    OSARC displays the SPF, DKIM, and DMARC records you need to add. Copy these values — you will paste them into your domain registrar's DNS settings in the next step.
+  </Step>
+  <Step title="Add records in your domain registrar">
+    Log in to your domain registrar (such as Cloudflare, GoDaddy, or Namecheap) and add each DNS record exactly as shown. DNS changes can take up to 48 hours to propagate, though most complete within a few minutes.
+  </Step>
+  <Step title="Verify the domain">
+    Return to **Settings → Email → Sending Domains** and click **Verify**. OSARC checks the DNS records and activates your domain. A green status indicator confirms the domain is ready to send.
+  </Step>
+</Steps>
+
+<Note>
+  OSARC's email deliverability depends on proper SPF, DKIM, and DMARC setup. Skipping DNS verification means your emails are sent without authentication, which will result in them landing in spam or being rejected outright by major email providers.
+</Note>
+
+## Sending a One-Off Email
+
+Once your sending domain is verified, you can send individual emails directly from any lead record in the CRM — useful for personalised follow-ups or responding to a specific lead situation.
+
+<Steps>
+  <Step title="Open the lead record">
+    Find and open the lead in the CRM.
+  </Step>
+  <Step title="Click the Email icon">
+    Click the **Email** icon in the action bar at the top of the lead record. The email composer will open as a side panel.
+  </Step>
+  <Step title="Choose a template or write your email">
+    Select a saved template from the dropdown, or write a custom email from scratch. If you use a template, merge tags are populated automatically with the lead's details.
+  </Step>
+  <Step title="Send the email">
+    Click **Send**. The email is dispatched immediately and logged on the lead record with open and click tracking. You will see delivery status, open time, and any link clicks directly in the lead's activity timeline.
+  </Step>
+</Steps>
+
+## Creating Email Templates
+
+Reusable templates save time and keep your messaging consistent across the team. Build a library of templates for every stage in your funnel — booking confirmations, no-show follow-ups, post-call summaries, and nurture sequences.
+
+Go to **Automation → Email Templates** and click **New Template**. Write your subject line and body, then use merge tags to personalise the content for each lead. The most commonly used merge tags are:
+
+- `{{first_name}}` — the lead's first name
+- `{{booking_date}}` — the date and time of the booked call
+- `{{closer_name}}` — the name of the closer assigned to the lead
+- `{{call_link}}` — the video call or phone link for the appointment
+
+Save the template once you are happy with it. It will be available when composing a one-off email and when adding email steps inside any workflow.
+
+## Email Sequences in Workflows
+
+For automated follow-up sequences — rather than individual sends — email steps live inside OSARC workflows. This is covered in detail on the [Workflows page](/automation/workflows), but the short version is: add an **Email** action step to any workflow, select your template, and OSARC sends it automatically when the lead reaches that step.
+
+A typical three-email booking confirmation sequence looks like this:
+
+1. **Immediately after booking**: Send "Your call is confirmed" email with the date, time, and call link.
+2. **24 hours before the call**: Send a reminder email with the same call details and a one-click reschedule link.
+3. **1 hour before the call**: Send a final reminder SMS (paired with a short email) to maximise show rate.
+
+All three steps are actions inside a single workflow triggered by the **Lead Booked** event. Because OSARC tracks whether the call was attended, you can branch the workflow after the call to send a different email depending on whether the lead showed or was a no-show.

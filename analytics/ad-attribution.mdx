@@ -1,0 +1,90 @@
+---
+title: "Ad Attribution: Cash Collected Per Ad and Creative"
+sidebarTitle: "Ad Attribution"
+description: "OSARC tracks every lead from the first ad click to cash collected. See which campaigns, creatives, and audiences generate real revenue — not just form fills."
+---
+
+OSARC's ad attribution connects every payment back to the exact ad, campaign, and creative that generated the lead. This is possible because the funnel, CRM, dialer, and payment system all share one database — there are no webhook gaps where attribution can be lost.
+
+## The Attribution Model
+
+OSARC uses first-touch attribution as its primary model: the credit for a lead goes to the ad that drove their very first visit to your funnel.
+
+To make this reliable at scale, OSARC captures multiple signals the moment a visitor lands on your page:
+
+- **UTM parameters** — `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, and `utm_term` are read from the URL and stored immediately on the session record
+- **IP address** — captured and stored alongside the session to support cross-device matching
+- **Device fingerprint** — a privacy-safe identifier derived from browser and device characteristics, used to stitch sessions together when UTMs are missing
+- **Session data** — page URL, referrer, timestamp, and funnel variant are all recorded at each touchpoint
+
+All of this data is attached to the lead record at the moment of form submission. Because OSARC's CRM, dialer, and payment tools all read from the same lead record, the attribution follows the lead through every stage — from first click, through the call, all the way to payment. Nothing needs to be joined across separate systems after the fact.
+
+---
+
+## What You Can Measure
+
+OSARC's attribution report lets you break revenue down across four dimensions, so you can identify exactly where your ad spend is producing results.
+
+<CardGroup cols={2}>
+  <Card title="Cash per Campaign" icon="bullhorn">
+    See total revenue attributed to each campaign. Compare your highest-volume campaigns against your most efficient ones — they are often not the same.
+  </Card>
+  <Card title="Cash per Ad Creative" icon="photo-film">
+    Identify which specific video or image assets are generating paying customers. Reallocate budget toward the creatives that close, not just those that generate cheap leads.
+  </Card>
+  <Card title="Cash per Audience" icon="users">
+    Break revenue down by targeting segment or audience. Discover whether your best-performing audience for form fills is also your best-performing audience for closed deals.
+  </Card>
+  <Card title="Cash per Funnel Step" icon="filter">
+    See how different funnel variants, pages, or VSL versions contribute to total revenue. Use this to make split-test decisions based on cash collected rather than conversion rate alone.
+  </Card>
+</CardGroup>
+
+---
+
+## Meta Pixel Events
+
+OSARC fires standard and custom Meta pixel events at each stage of your funnel. This gives Meta's algorithm real buyer signals to optimise against, rather than just form submissions.
+
+| Funnel Stage | Pixel Event |
+|---|---|
+| Lead submits the application form | `Lead` |
+| Lead books a call | `Schedule` |
+| Lead attends the call (show) | Custom `Show` event |
+| Sale is closed and payment collected | `Purchase` (with value) |
+
+The `Purchase` event includes the deal value, so Meta receives the actual revenue figure rather than a fixed placeholder. This allows Meta to optimise for high-value buyers, not just any buyer.
+
+<Note>
+  These events teach Meta's algorithm to optimise for real buyers, not just form fills. Because OSARC fires a `Purchase` event with accurate cash values, Meta can identify and target lookalike audiences that resemble your actual paying customers. This typically improves cost per acquisition over time as the algorithm accumulates signal.
+</Note>
+
+---
+
+## Reading the Attribution Report
+
+<Steps>
+  <Step title="Open the Attribution Report">
+    Go to **Analytics → Attribution** in the left navigation. The report loads with the date range set to the current month by default.
+  </Step>
+  <Step title="Select a Date Range">
+    Use the date picker at the top of the page to set the period you want to analyse. You can select a preset (today, this week, this month) or enter a custom start and end date.
+  </Step>
+  <Step title="Choose Your Breakdown">
+    Use the **Break down by** dropdown to select how you want to slice the data:
+    - **Campaign** — groups results by your Meta campaign names
+    - **Ad set** — groups by targeting and budget groupings within campaigns
+    - **Creative** — groups by the individual ad (image or video asset)
+    - **Audience** — groups by the audience or interest segment targeted
+  </Step>
+  <Step title="Sort by Cash Collected">
+    Click the **Cash Collected** column header to sort your results from highest to lowest. This surfaces your best-performing sources immediately, without needing to scan the full table.
+  </Step>
+  <Step title="Review Lead Volume Alongside Revenue">
+    Check the **Leads** column alongside Cash Collected. A campaign with high cash and high lead volume confirms consistency. A campaign with high cash but low volume may indicate a highly efficient but under-scaled opportunity worth increasing budget on.
+  </Step>
+</Steps>
+
+<Warning>
+  Attribution accuracy depends on OSARC's pixel being the primary tracking script on your funnel pages. Running competing pixels from other platforms alongside OSARC's pixel may cause double-counting of events and will distort the data in this report. If you need to run additional scripts, contact your onboarding specialist before adding them.
+</Warning>

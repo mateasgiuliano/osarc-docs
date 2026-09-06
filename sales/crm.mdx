@@ -1,0 +1,91 @@
+---
+title: "CRM: Manage Every Lead in One Place"
+sidebarTitle: "CRM"
+description: "OSARC's CRM stores every lead, their full history, call recordings, and payment status. Filter, search, and act on leads without leaving the platform."
+---
+
+The OSARC CRM is the central record for every lead in your business. Because it shares a database with your funnels, dialer, and payment system, each lead record automatically contains the full picture — ads clicked, videos watched, form answers, calls made, and payments collected. There is no manual syncing, no export-and-import, and no data that lives in a separate tool. Everything is in one place the moment it happens.
+
+## Lead Record Overview
+
+Every lead in OSARC has a single record that grows automatically as they move through your funnel. When you open a lead, you see the complete picture without having to pull information from multiple screens.
+
+<CardGroup cols={2}>
+  <Card title="Contact Details" icon="user">
+    Name, email address, and phone number captured at form submission. Editable if the lead provides updated information on a call.
+  </Card>
+  <Card title="Attribution Data" icon="crosshairs">
+    The ad, creative, funnel step, and UTM parameters that brought the lead in. Written once at first click and never overwritten — you always know exactly what source produced the lead.
+  </Card>
+  <Card title="Form Answers" icon="clipboard-list">
+    Every answer the lead submitted on your application or opt-in form, displayed in full. Use this to qualify the lead before the call and to filter CRM views by answer.
+  </Card>
+  <Card title="Video Watch History" icon="video">
+    How far the lead watched your VSL or webinar, broken down by minute. See exactly where they dropped off or if they watched to the end.
+  </Card>
+  <Card title="Booking & Appointment History" icon="calendar">
+    Every booking the lead has made, including any cancellations or reschedules. Shows the scheduled time, assigned setter or closer, and current status.
+  </Card>
+  <Card title="Call Log" icon="phone">
+    Every call made to the lead, with recording, transcript, disposition logged, and the setter who made the call. Recordings are playable directly from the record.
+  </Card>
+  <Card title="Payment & Deal Status" icon="circle-dollar-to-slot">
+    Revenue collected from the lead, deal stage, and any payment history. Updated automatically when a payment is recorded through OSARC.
+  </Card>
+  <Card title="AI Show / Close Prediction" icon="sparkles">
+    OSARC's AI reads the lead's full history — form answers, watch time, call transcripts, and behaviour — and gives you a show prediction and a close prediction before every call.
+  </Card>
+</CardGroup>
+
+## Navigating the CRM
+
+<Steps>
+  <Step title="Open the CRM">
+    Click **CRM** in the left navigation. The default view shows all leads sorted by most recent activity.
+  </Step>
+  <Step title="Search or filter">
+    Use the search bar to find a lead by name, email, or phone number. Use the **Filters** panel to narrow by status, assigned setter, traffic source, date range, or any form answer field.
+  </Step>
+  <Step title="Open a lead record">
+    Click any lead row to open their full record. All sections — contact details, attribution, calls, payments — load on a single scrollable page.
+  </Step>
+  <Step title="Take action">
+    Open the **Actions** menu (top right of the lead record) to call the lead, send an email, reassign to a different setter or closer, or add an internal note. Every action is logged with a timestamp and the team member who performed it.
+  </Step>
+</Steps>
+
+## Lead Statuses
+
+OSARC uses a default set of pipeline statuses to track where every lead stands. These statuses update automatically based on dialer dispositions, so your CRM reflects reality without manual updates from your team.
+
+<Accordion title="New Lead">
+  The lead has submitted a form but has not yet been called or booked. Newly claimed leads that have not reached a disposition remain here until the setter logs an outcome.
+</Accordion>
+
+<Accordion title="Booked">
+  The lead has a confirmed appointment on the calendar. This status is set automatically when a booking is created through the scheduler.
+</Accordion>
+
+<Accordion title="Showed">
+  The lead attended their scheduled call. Updated automatically when the closer dispositions the call as completed.
+</Accordion>
+
+<Accordion title="No Show">
+  The lead had a booking but did not attend. Set by the closer when they disposition the call as a no-show, which can trigger a follow-up workflow automatically.
+</Accordion>
+
+<Accordion title="Closed Won">
+  The lead became a paying customer. Updated when a payment is recorded or when the closer marks the deal as won.
+</Accordion>
+
+<Accordion title="Closed Lost">
+  The lead was not converted. The closer logs this disposition at the end of the sales call along with the reason, which feeds into your close-rate analytics.
+</Accordion>
+
+<Accordion title="Nurture">
+  The lead is not ready to buy now but has not been disqualified. Leads in Nurture can be enrolled in email sequences or flagged for a follow-up call at a future date.
+</Accordion>
+
+<Tip>
+  Use the filter combination **Status: Booked** + **Close Prediction: High** to build a prioritised call list before your shift starts. Your closers can spend the first minutes of their day on the leads most likely to convert.
+</Tip>

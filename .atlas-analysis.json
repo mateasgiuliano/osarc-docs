@@ -1,20 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "name": "OSARC",
+  "projectType": "saas",
+  "projectName": "OSARC",
+  "projectDescription": "OSARC is an all-in-one marketing and sales operating system for high-volume call funnel businesses, replacing ten separate tools with a single unified platform powered by AI.",
   "theme": "luma",
-  "favicon": "https://media.brand.dev/453ad334-3170-47b2-a593-0a16d79b27b7.svg",
-  "colors": {
-    "primary": "#2383e2",
-    "light": "#191919",
-    "dark": "#848484"
-  },
-  "navbar": {
-    "primary": {
-      "type": "button",
-      "label": "Sign In",
-      "href": "https://osarc.ai"
-    }
-  },
+  "primaryColor": "#2383e2",
+  "lightColor": "#191919",
+  "darkColor": "#848484",
   "navigation": {
     "tabs": [
       {
@@ -74,5 +65,30 @@
         ]
       }
     ]
-  }
+  },
+  "keyFeatures": [
+    "All-in-one funnel, CRM, dialer, and email on one database",
+    "Unbreakable end-to-end attribution from first click to payment",
+    "AI assistant with full business context — clicks, calls, transcripts, payments",
+    "AI show and close predictions before every booked call",
+    "Automated sales floor with lead claiming, timers, and call logging",
+    "VSL video analytics showing drop-off per minute vs. booking rate",
+    "Meta pixel events fired on real cash outcomes, not form fills",
+    "Team performance tracking: show rate, close rate, speed to lead per setter"
+  ],
+  "publicApiSurface": [
+    "Funnel builder",
+    "Video hosting",
+    "Application forms",
+    "Appointment scheduler",
+    "CRM",
+    "Dialer with call recording and transcription",
+    "Email campaigns",
+    "Workflow automation",
+    "Ad attribution tracking",
+    "Meta pixel event integration",
+    "AI business intelligence assistant",
+    "Shift tracker",
+    "Analytics dashboard"
+  ]
 }

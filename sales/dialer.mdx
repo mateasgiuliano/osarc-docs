@@ -1,0 +1,74 @@
+---
+title: "Make, Record, and Log Calls with the OSARC Dialer"
+sidebarTitle: "Dialer"
+description: "OSARC's built-in dialer records and transcribes every call. Setters disposition outcomes on the spot, and every recording links directly to the lead record."
+---
+
+The OSARC dialer is built directly into the platform. Calls are made from inside the CRM, every call is recorded and transcribed automatically, and setters log the outcome the moment the call ends — so nothing goes unlogged and every result is immediately visible in your analytics. There is no third-party calling app, no copy-pasting notes into a separate CRM, and no gap between what happened on the call and what the data shows.
+
+## Making a Call
+
+<Steps>
+  <Step title="Open the lead record">
+    Navigate to **CRM** and click the lead you want to call. All of their history — form answers, past calls, AI predictions — is visible on the same screen before you dial.
+  </Step>
+  <Step title="Click the Call button">
+    Click the **phone icon** at the top of the lead record or in the Actions menu. The dialer panel opens on the right side of the screen.
+  </Step>
+  <Step title="Connect your number">
+    The dialer uses the phone number configured in your settings. Confirm the outbound number shown in the dialer panel, then click **Call** to initiate the connection.
+  </Step>
+  <Step title="Recording starts automatically">
+    The moment the call connects, recording and transcription begin in the background. There is nothing to enable on a per-call basis — every connected call is captured.
+  </Step>
+  <Step title="Disposition the call">
+    When the call ends, the disposition panel appears automatically. Select the correct outcome before moving to the next lead. The panel will not disappear until a disposition is logged.
+  </Step>
+</Steps>
+
+<Note>
+  All calls require a connected and verified phone number. Go to **Settings → Dialer → Phone Numbers** to add your number, complete verification, and set your default outbound caller ID.
+</Note>
+
+## Dispositioning a Call
+
+A disposition is the logged outcome of a call. It tells OSARC what happened, updates the lead's status in the CRM, and can trigger downstream workflows automatically. Setters select a disposition the moment a call ends — the panel is mandatory and cannot be skipped.
+
+<Tabs>
+  <Tab title="Connected Outcomes">
+    These dispositions apply when the lead answered and a conversation took place.
+
+    | Disposition | What it means | CRM status update |
+    |---|---|---|
+    | **Connected – Booked** | Lead answered and agreed to a scheduled call | Moves to **Booked** |
+    | **Connected – Not Interested** | Lead answered and declined | Moves to **Closed Lost** |
+    | **Connected – No Show Follow-Up** | Lead answered; was a no-show being re-engaged | Stays in **No Show** with follow-up flag |
+  </Tab>
+  <Tab title="Not Connected Outcomes">
+    These dispositions apply when the lead did not answer or was unreachable.
+
+    | Disposition | What it means | CRM status update |
+    |---|---|---|
+    | **Voicemail Left** | Call went to voicemail and a message was left | Status unchanged; follow-up task created |
+    | **No Answer** | Call rang out with no voicemail left | Status unchanged; re-queued based on workflow rules |
+    | **Wrong Number** | Number is incorrect or belongs to a different person | Flagged for review; removed from active queue |
+  </Tab>
+</Tabs>
+
+Selecting any disposition immediately updates the lead record and, where a workflow is configured, fires the appropriate automation — for example, sending a no-show re-engagement email when **Voicemail Left** is logged three times in a row.
+
+## Call Recordings and Transcripts
+
+Every connected call produces two assets that are attached to the lead record automatically: a recording and a transcript.
+
+**Recordings** are available on the lead record within seconds of the call ending. Managers and team leads can play recordings directly from the CRM or from the team performance dashboard — there is no need to download files or access a separate portal.
+
+**Transcripts** are generated within minutes of the call ending. The full text of the conversation is indexed and searchable, so you can search across all calls for specific objections, competitor mentions, or key phrases.
+
+**AI analysis** runs on every transcript. OSARC's AI reads the conversation to update the lead's close prediction, extract intent signals, and surface any follow-up commitments the setter made during the call. This analysis feeds into the show and close predictions visible on every booked lead record.
+
+**Manager review** is available from two places: the individual lead record (for a single call) or the **Team Performance** dashboard (to review calls across your whole floor, filtered by setter, date, or disposition outcome).
+
+<Tip>
+  Before a closer gets on a booked call, they can read the transcript of the setter's conversation to understand exactly what was promised, what objections came up, and what the lead said they were trying to achieve. This preparation significantly improves close rates.
+</Tip>

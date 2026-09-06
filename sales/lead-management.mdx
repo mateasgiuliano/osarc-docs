@@ -1,0 +1,68 @@
+---
+title: "Lead Claiming, Timers, and Queue Management"
+sidebarTitle: "Lead Management"
+description: "OSARC enforces accountability on your sales floor with automated lead claiming, five-minute action timers, and lockouts that keep setters moving."
+---
+
+OSARC's lead management system is designed to eliminate the most common failure mode in call funnel sales: leads that sit uncalled while setters cherry-pick or lose track. The claiming system, timers, and lockouts create a structure where every lead gets called fast. Speed to lead is one of the strongest drivers of show rate, and this system enforces it automatically — without requiring a manager to watch the floor every minute.
+
+## How Lead Claiming Works
+
+When a new lead submits your form or books a call, they enter the setter queue immediately. The claiming system then runs a simple, non-negotiable sequence.
+
+<Steps>
+  <Step title="Lead enters the queue">
+    A new booking or inbound lead appears in the setter queue visible to all available setters. The lead is displayed with their name, the funnel they came through, and their AI show prediction score.
+  </Step>
+  <Step title="A setter claims the lead">
+    Any available setter can click **Claim** to take ownership of the lead. In open-queue mode, the first setter to claim wins. In assigned mode, leads are allocated by a manager or by routing rules.
+  </Step>
+  <Step title="Five-minute timer starts">
+    The moment a setter claims a lead, a five-minute countdown begins. The timer is visible to the setter and to any manager watching the live floor dashboard.
+  </Step>
+  <Step title="Setter must make the call">
+    The setter must initiate a call to the lead before the timer reaches zero. Starting the call stops the timer and locks the lead to that setter for the duration of the call.
+  </Step>
+  <Step title="Failure to call: lead is released">
+    If the timer expires before a call is made, the setter automatically loses the lead. The lead returns to the unclaimed queue, visible to all other available setters.
+  </Step>
+  <Step title="Lockout period begins">
+    The setter who failed to call is locked out from claiming any new leads for ten minutes. This prevents repeated cherry-picking and ensures setters who are ready to work get first access to fresh leads.
+  </Step>
+</Steps>
+
+## Why This Matters: Speed to Lead
+
+Speed to lead — the time between a lead submitting their form and receiving their first call — is one of the most reliable predictors of whether that lead will show up for their booked appointment. The longer a lead waits, the more time they have to change their mind, get distracted, or book with a competitor.
+
+<Note>
+  Research consistently shows that leads called within five minutes of submitting a form are dramatically more likely to show up for their scheduled call than leads called after an hour or more. OSARC's five-minute claiming timer is built around this threshold. Keeping your speed-to-lead metric below five minutes should be a non-negotiable standard on your sales floor.
+</Note>
+
+You can track speed to lead per setter in the **Shift Tracker** and **Team Performance** dashboard. Use this number as your primary input when evaluating setter performance — a setter with a high speed to lead will almost always have a higher show rate than a slow one, regardless of what they say on the call.
+
+## Queue Configuration
+
+You can adjust how the claiming system behaves to match your team structure and floor rules. These settings are found in **Settings → Sales Floor → Queue**.
+
+- **Claiming mode**: Set to **Open Queue** (first setter to click Claim wins) or **Assigned** (a manager or routing rule determines who gets each lead).
+- **Timer duration**: The default is five minutes. You can increase or decrease this value based on your team's average call readiness, though reducing it below three minutes is not recommended unless your team is experienced.
+- **Lockout duration**: The default lockout for a missed claim is ten minutes. This can be adjusted to be more or less strict depending on your floor culture.
+- **Priority leads**: New bookings and high-value leads (based on AI prediction score or form answer criteria) can be pinned to the top of the queue so setters see and claim them first.
+- **Queue visibility**: Choose whether all setters see the full queue or only the leads assigned to them.
+
+<Warning>
+  Timer and lockout settings apply to every setter on the floor the moment you save them — there is no per-setter override from this screen. Make changes during a break or between shifts to avoid disrupting active claiming sessions.
+</Warning>
+
+## Manager Controls
+
+Managers have a separate layer of controls that sit above the automated system. These allow you to intervene when circumstances require it without changing the rules for the whole floor.
+
+**Manual reassignment**: Open any lead record and use the Actions menu to reassign it to a specific setter, regardless of queue position or claiming status.
+
+**Lockout override**: If a setter was locked out due to a technical issue or a legitimate reason, you can clear their lockout instantly from the **Live Floor** dashboard. Navigate to the setter's row and click **Clear Lockout**.
+
+**Claiming history log**: Every lead has a full log of who claimed it, when, whether the timer expired, and who ultimately made the call. Open a lead record and scroll to the **Activity Log** section to see the full sequence of events.
+
+**Live floor visibility**: The **Live Floor** dashboard shows every setter currently on shift, the leads they currently hold, how much time is left on any active timer, and how many claims they've made this shift. Use this to spot bottlenecks or inactive setters in real time.
