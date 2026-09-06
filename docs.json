@@ -31,68 +31,140 @@
     }
   },
   "navigation": {
-    "groups": [
+    "tabs": [
       {
-        "group": "Getting started",
-        "icon": "rocket",
-        "pages": [
-          "index",
-          "quickstart",
-          "desktop",
-          "how-osarc-works"
+        "tab": "Home",
+        "icon": "house",
+        "groups": [
+          {
+            "group": "Getting started",
+            "pages": [
+              "index",
+              "quickstart",
+              "desktop",
+              "how-osarc-works"
+            ]
+          },
+          {
+            "group": "Reference",
+            "pages": [
+              "glossary"
+            ]
+          }
         ]
       },
       {
-        "group": "Talk to ARC",
+        "tab": "ARC",
         "icon": "sparkles",
-        "pages": [
-          "arc/ask-arc",
-          "arc/proposals"
+        "groups": [
+          {
+            "group": "Talk to ARC",
+            "pages": [
+              "arc/ask-arc",
+              "arc/proposals"
+            ]
+          }
         ]
       },
       {
-        "group": "Apps",
-        "icon": "grid-2",
-        "pages": [
-          "apps/contacts",
-          "apps/sales",
-          "apps/scheduler",
-          "apps/forms",
-          "apps/funnels",
-          "apps/workflows",
-          "apps/messages",
-          "apps/mail",
-          "apps/meta-ads",
-          "apps/attribution",
-          "apps/docs-and-sheets",
-          "apps/finance",
-          "apps/team"
+        "tab": "Sales",
+        "icon": "phone",
+        "groups": [
+          {
+            "group": "People",
+            "pages": [
+              "apps/contacts",
+              "apps/messages",
+              "apps/mail"
+            ]
+          },
+          {
+            "group": "Pipeline and calls",
+            "pages": [
+              "apps/sales",
+              "apps/scheduler"
+            ]
+          },
+          {
+            "group": "Team",
+            "pages": [
+              "apps/team"
+            ]
+          }
         ]
       },
       {
-        "group": "Integrations",
+        "tab": "Marketing",
+        "icon": "bullseye",
+        "groups": [
+          {
+            "group": "Pages and forms",
+            "pages": [
+              "apps/funnels",
+              "apps/forms"
+            ]
+          },
+          {
+            "group": "Ads and tracking",
+            "pages": [
+              "apps/meta-ads",
+              "apps/attribution"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Workflows",
+        "icon": "diagram-project",
+        "groups": [
+          {
+            "group": "Automation",
+            "pages": [
+              "apps/workflows"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Workspace",
+        "icon": "folder-open",
+        "groups": [
+          {
+            "group": "Apps",
+            "pages": [
+              "apps/docs-and-sheets",
+              "apps/finance"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Integrations",
         "icon": "plug",
-        "pages": [
-          "integrations/overview",
-          "integrations/meta",
-          "integrations/whatsapp",
-          "integrations/payments",
-          "integrations/calendars"
+        "groups": [
+          {
+            "group": "Connect",
+            "pages": [
+              "integrations/overview",
+              "integrations/meta",
+              "integrations/whatsapp",
+              "integrations/payments",
+              "integrations/calendars"
+            ]
+          }
         ]
       },
       {
-        "group": "Team and access",
+        "tab": "Team and access",
         "icon": "users",
-        "pages": [
-          "team/roles",
-          "team/invite-and-remove"
-        ]
-      },
-      {
-        "group": "Reference",
-        "icon": "book",
-        "pages": [
-          "glossary"
+        "groups": [
+          {
+            "group": "Access",
+            "pages": [
+              "team/roles",
+              "team/invite-and-remove"
+            ]
+          }
         ]
       }
     ]
