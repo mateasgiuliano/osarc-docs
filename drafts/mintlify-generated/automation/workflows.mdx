@@ -1,0 +1,102 @@
+---
+title: "Automate Your Entire Sales Process with OSARC Workflows"
+sidebarTitle: "Workflows"
+description: "Build automated sequences that trigger on any lead event — bookings, dispositions, no-shows, or payments — without a third-party automation tool."
+---
+
+OSARC workflows let you automate any follow-up action based on what happens to a lead. Because every event — a form submission, a no-show, a closed deal — is tracked natively, you can build sequences that react to real outcomes rather than relying on Zap tags that break when someone forgets to update them.
+
+## How Workflows Work
+
+Every workflow follows the same three-part model: a **trigger** starts the workflow, an optional **condition** filters which leads qualify, and an **action** defines what OSARC does next. Because every lead event lives in one database, you can build logic that would previously have required five connected tools.
+
+- **Trigger**: The event that starts the workflow. Examples include Lead Booked, Call Dispositioned, and Payment Received. OSARC fires triggers automatically — no webhooks or manual tagging required.
+- **Condition**: An optional filter that narrows which leads enter the workflow. For example, you can restrict a workflow to run only when the disposition equals No Show, or only when the lead source matches a specific Meta campaign.
+- **Action**: What OSARC does when a lead enters the workflow. Actions include sending an email, sending an SMS, reassigning the lead to a different setter, updating the CRM status, or waiting a set number of hours before the next step.
+
+You can chain as many conditions and actions as you need, and branch on different outcomes to build sequences that mirror your actual sales process.
+
+## Common Workflow Recipes
+
+The workflows below cover the most common automation needs in a call funnel business. Copy the logic directly or adjust the timing and messages to fit your process.
+
+<Accordion title="No-show re-engagement">
+  Automatically follow up with leads who miss their call, without any manual effort from your team.
+
+  1. **Trigger**: Call Dispositioned → No Show
+  2. **Wait**: 1 hour
+  3. **Action**: Send email — "We missed you" (include a direct rebooking link)
+  4. **Wait**: 24 hours
+  5. **Action**: Send SMS reminder with booking link
+  6. **Condition**: If no new booking logged after SMS
+  7. **Action**: Update lead status to Nurture
+
+  This sequence keeps the lead warm without tying up your setters on manual callbacks.
+</Accordion>
+
+<Accordion title="Speed-to-lead enforcement">
+  Ensure every booked lead gets called within your target window. Slow speed-to-lead is one of the biggest silent killers of show rate.
+
+  1. **Trigger**: Lead Booked
+  2. **Wait**: 6 minutes
+  3. **Condition**: If no outbound call logged against the lead
+  4. **Action**: Send Slack alert to team manager with lead name and booking time
+  5. **Action**: Flag lead as Uncalled in the CRM
+
+  Pair this workflow with the shift tracker to hold setters accountable in real time.
+</Accordion>
+
+<Accordion title="Post-sale onboarding">
+  Kick off your onboarding process the moment a payment is collected — no manual hand-off required.
+
+  1. **Trigger**: Payment Received
+  2. **Action**: Send welcome email with onboarding instructions and next steps
+  3. **Action**: Enrol lead in onboarding email sequence
+  4. **Action**: Send internal notification to the assigned account manager
+
+  Because the trigger fires on a real payment event (not a form fill or a tag), this workflow only runs for genuine buyers.
+</Accordion>
+
+<Accordion title="Lead qualification follow-up">
+  Re-engage leads who submitted your application form but did not book a call.
+
+  1. **Trigger**: Form Submitted (no booking within 2 hours)
+  2. **Wait**: 2 hours
+  3. **Action**: Send SMS with direct booking link
+  4. **Wait**: 48 hours
+  5. **Condition**: If still no booking logged
+  6. **Action**: Move lead status to Nurture
+
+  This keeps qualified prospects moving toward a booked call without requiring manual outreach from your team.
+</Accordion>
+
+## Building a Workflow
+
+<Steps>
+  <Step title="Open the Workflows builder">
+    Go to **Automation → Workflows** in the left navigation panel.
+  </Step>
+  <Step title="Create a new workflow">
+    Click **New Workflow** and give it a descriptive name (for example, "No-show Re-engagement — Meta Leads").
+  </Step>
+  <Step title="Choose a trigger event">
+    Select a trigger event from the dropdown. Every native OSARC event is available here — Lead Booked, Form Submitted, Call Dispositioned, Payment Received, and more.
+  </Step>
+  <Step title="Add conditions (optional)">
+    Click **Add Condition** to filter which leads enter the workflow. You can filter by disposition type, lead source, funnel step, form answer, or any CRM field.
+  </Step>
+  <Step title="Add action steps">
+    Click **Add Step** to build out your action sequence. Available actions include: send email, send SMS, wait a set time, update CRM status, reassign lead, and notify a team member.
+  </Step>
+  <Step title="Activate the workflow">
+    Toggle the workflow to **Active** when you are ready to go live. OSARC will begin processing all matching leads from that moment forward.
+  </Step>
+</Steps>
+
+<Warning>
+  Active workflows run on every lead that matches the trigger conditions, including your existing database. Test any new workflow on a small, filtered lead segment before enabling it across your full database to avoid sending unintended messages at scale.
+</Warning>
+
+<Tip>
+  Use the workflow run log at **Automation → Workflow Logs** to see exactly which leads entered a workflow, which step they are on, and what actions have been taken. This is your first stop when troubleshooting a sequence that is not behaving as expected.
+</Tip>

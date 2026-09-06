@@ -1,0 +1,94 @@
+{
+  "projectType": "saas",
+  "projectName": "OSARC",
+  "projectDescription": "OSARC is an all-in-one marketing and sales operating system for high-volume call funnel businesses, replacing ten separate tools with a single unified platform powered by AI.",
+  "theme": "luma",
+  "primaryColor": "#2383e2",
+  "lightColor": "#191919",
+  "darkColor": "#848484",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "pilot-programme"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/unified-platform",
+              "concepts/attribution",
+              "concepts/ai-intelligence"
+            ]
+          },
+          {
+            "group": "Funnels & Lead Capture",
+            "pages": [
+              "funnels/funnel-builder",
+              "funnels/video-hosting",
+              "funnels/application-forms",
+              "funnels/scheduler"
+            ]
+          },
+          {
+            "group": "Sales Floor",
+            "pages": [
+              "sales/crm",
+              "sales/dialer",
+              "sales/lead-management",
+              "sales/shift-tracker"
+            ]
+          },
+          {
+            "group": "Analytics & Reporting",
+            "pages": [
+              "analytics/dashboard",
+              "analytics/ad-attribution",
+              "analytics/vsl-analytics",
+              "analytics/team-performance"
+            ]
+          },
+          {
+            "group": "Automation & Workflows",
+            "pages": [
+              "automation/workflows",
+              "automation/email",
+              "automation/meta-integration"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "All-in-one funnel, CRM, dialer, and email on one database",
+    "Unbreakable end-to-end attribution from first click to payment",
+    "AI assistant with full business context — clicks, calls, transcripts, payments",
+    "AI show and close predictions before every booked call",
+    "Automated sales floor with lead claiming, timers, and call logging",
+    "VSL video analytics showing drop-off per minute vs. booking rate",
+    "Meta pixel events fired on real cash outcomes, not form fills",
+    "Team performance tracking: show rate, close rate, speed to lead per setter"
+  ],
+  "publicApiSurface": [
+    "Funnel builder",
+    "Video hosting",
+    "Application forms",
+    "Appointment scheduler",
+    "CRM",
+    "Dialer with call recording and transcription",
+    "Email campaigns",
+    "Workflow automation",
+    "Ad attribution tracking",
+    "Meta pixel event integration",
+    "AI business intelligence assistant",
+    "Shift tracker",
+    "Analytics dashboard"
+  ]
+}

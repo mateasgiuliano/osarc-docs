@@ -1,0 +1,85 @@
+---
+title: "Connect OSARC to Meta for Cash-Based Ad Optimisation"
+sidebarTitle: "Meta Integration"
+description: "Connect your Meta ad account to OSARC to fire pixel events on real outcomes — shows and payments — so Meta optimises for buyers, not form fills."
+---
+
+Connecting OSARC to Meta is one of the highest-leverage things you can do for your ad performance. Instead of firing a pixel event when someone fills out a form, OSARC fires events when leads show up, close, and pay — teaching Meta's algorithm to find people who actually buy. This single change shifts Meta's optimisation target from "people who click" to "people who become customers," and compounds over time as the algorithm accumulates purchase signal.
+
+## Connecting Your Meta Ad Account
+
+The connection takes a few minutes and requires admin access to your Meta Business Manager and the ad account you want to link.
+
+<Steps>
+  <Step title="Open the Meta integration settings">
+    Go to **Settings → Integrations → Meta**.
+  </Step>
+  <Step title="Connect your Meta account">
+    Click **Connect Meta Account**. A Meta authorisation window will open.
+  </Step>
+  <Step title="Log in with Meta Business Manager">
+    Log in using the credentials for the Meta Business Manager account that owns your ad account and pixel. If you manage multiple businesses, make sure you select the correct one.
+  </Step>
+  <Step title="Select your ad account and pixel">
+    From the dropdown menus, choose the specific ad account and Meta pixel you want OSARC to send events to. Each OSARC workspace can be connected to one pixel at a time.
+  </Step>
+  <Step title="Grant permissions">
+    Review and grant the requested permissions. OSARC requires access to send Conversions API events on behalf of your pixel. No ad creation or spend permissions are required.
+  </Step>
+  <Step title="Save the connection">
+    Click **Save**. OSARC will confirm the connection and begin sending events immediately. The first events will appear in your Meta Events Manager within a few minutes.
+  </Step>
+</Steps>
+
+## Events OSARC Sends to Meta
+
+OSARC maps every key funnel milestone to a Meta pixel event automatically. There is no manual event configuration required — the moment a lead moves through your funnel, the corresponding event fires.
+
+| OSARC Event | Meta Pixel Event | Fires When |
+|---|---|---|
+| Form submitted | Lead | Prospect completes your application form |
+| Call booked | Schedule | Prospect books an appointment |
+| Lead graded | Custom: GradedLead | Setter marks the lead as qualified |
+| Call attended | Custom: Show | Lead attends the booked call |
+| Deal closed | Purchase (with value) | Payment is collected |
+
+The `Purchase` event includes the actual revenue value of the deal, so Meta can optimise not just for buyers but for buyers at your price point.
+
+## Why Cash-Based Events Matter
+
+Most advertisers running call funnels connect a basic pixel and optimise for the `Lead` event — meaning Meta's algorithm is trained to find people who fill out forms. When you feed Meta `Purchase` events with real revenue values instead, the entire dynamic shifts.
+
+Meta's algorithm is a feedback loop. It optimises toward whatever event you feed it, using everything it knows about the people who triggered that event — their behaviour, interests, lookalike profiles — to find more of the same. When your conversion event is a form fill, the algorithm finds form fillers. When your conversion event is a payment of €3,000, the algorithm finds buyers.
+
+The practical results of switching to cash-based optimisation are:
+
+- **Lower cost per acquisition** as Meta deprioritises traffic that fills forms but never buys
+- **Improved lead quality** because the lookalike audience is built from actual customers, not just applicants
+- **Accurate ROAS reporting** in Meta Ads Manager, because every `Purchase` event carries the real deal value
+- **A compounding advantage** over competitors who are still training Meta on form fills
+
+OSARC fires these events through the Conversions API (server-side), which is more reliable than browser-based pixel events and is not affected by ad blockers or iOS tracking restrictions.
+
+## Verifying Event Delivery
+
+After connecting, confirm that OSARC's events are reaching Meta correctly before relying on them for optimisation.
+
+<Steps>
+  <Step title="Open the OSARC Event Log">
+    Go to **Settings → Integrations → Meta → Event Log**.
+  </Step>
+  <Step title="Review the event feed">
+    You will see a log of every event sent by OSARC, including the event type (for example, `Purchase` or `Schedule`), the timestamp, the associated lead, and the delivery status (Sent / Failed).
+  </Step>
+  <Step title="Cross-check in Meta Events Manager">
+    Log in to Meta Events Manager and open your connected pixel. Navigate to the **Test Events** or **Overview** tab and confirm that the event types and volumes match what you see in the OSARC Event Log. A small delay of a few minutes between OSARC sending and Meta receiving is normal.
+  </Step>
+</Steps>
+
+<Warning>
+  Do not run a separate third-party pixel alongside OSARC's native integration on the same funnel pages. Duplicate pixel events — for example, a browser pixel firing a `Lead` event at the same time as OSARC fires one via the Conversions API — will distort your Meta reporting and corrupt the training data that Meta's algorithm uses to optimise your campaigns.
+</Warning>
+
+<Tip>
+  Allow at least two to three weeks of `Purchase` events to accumulate before evaluating OSARC's impact on your Meta ad performance. Meta's algorithm requires a minimum volume of conversion events to exit the learning phase and begin meaningful optimisation. If your deal volume is low, you can temporarily optimise for `Show` events while `Purchase` data builds up.
+</Tip>

@@ -1,0 +1,75 @@
+---
+title: "Set Up Call Booking and Automate the Post-Booking Flow"
+sidebarTitle: "Scheduler"
+description: "OSARC's built-in scheduler lets prospects book calls directly after applying. Bookings feed instantly into the CRM, dialer queue, and setter notifications."
+---
+
+OSARC's scheduler handles appointment booking without a third-party calendar tool. When a prospect books, the appointment appears immediately in the CRM, triggers setter notifications, and fires a confirmation email — all without a Zap. Because the scheduler shares a database with your funnel, CRM, and dialer, a new booking is not just a calendar event: it is a fully attributed lead record with a form submission, a traffic source, and an AI-generated show prediction attached from the moment it arrives.
+
+## Setting Up Your Calendar
+
+<Steps>
+  <Step title="Open the Scheduler section">
+    Go to **Scheduler** in the left navigation.
+  </Step>
+  <Step title="Create a new calendar">
+    Click **New Calendar** and give it a name — for example, "Strategy Call" or "Discovery Call."
+  </Step>
+  <Step title="Set your availability">
+    Define the days of the week, the hours you take calls, and your time zone. OSARC automatically converts availability into the prospect's local time zone when they view the booking page.
+  </Step>
+  <Step title="Set the call duration">
+    Choose a call length — typically **30 minutes** for a setter intro call or **60 minutes** for a closer strategy session. You can create separate calendars for each call type.
+  </Step>
+  <Step title="Connect to your funnel confirmation page">
+    Embed the scheduler on the confirmation page of your application funnel. Prospects land here immediately after submitting their form, while intent is at its highest.
+  </Step>
+  <Step title="Test with a dummy booking">
+    Book a test appointment using your own details. Confirm that the lead appears in the CRM, the setter receives a notification, and the confirmation email arrives in your inbox.
+  </Step>
+</Steps>
+
+## What Happens After a Booking
+
+Every booking triggers a coordinated sequence across OSARC's connected tools. You do not configure any of these steps manually — they happen because everything runs on one platform.
+
+<Steps>
+  <Step title="CRM is updated">
+    The lead record is created (if new) or updated (if the prospect already exists in your CRM) with the appointment time, date, and any form answers submitted before booking.
+  </Step>
+  <Step title="Setter is notified">
+    The setter assigned to the lead receives an in-app notification and an email alert with the prospect's name, booking time, and a link to the full lead record.
+  </Step>
+  <Step title="Confirmation email is sent">
+    OSARC fires a confirmation email to the prospect immediately after booking. You can customise the subject, body, and sender name under **Settings → Scheduler → Email Sequences**.
+  </Step>
+  <Step title="Lead enters the dialer queue">
+    The booked lead appears in the setter's dialer queue for the relevant shift. When the setter claims the lead, a five-minute call timer starts automatically.
+  </Step>
+  <Step title="AI builds a pre-call briefing">
+    OSARC's AI reads the lead's form answers, VSL watch time, traffic source, and any prior interactions to generate a show prediction and close prediction before the call. Your setter and closer see this briefing when they open the lead record.
+  </Step>
+</Steps>
+
+## Reminders and No-Show Reduction
+
+Show rate is directly affected by what happens between booking and call time. OSARC gives you tools to keep prospects engaged and reduce drop-off in that window.
+
+<AccordionGroup>
+  <Accordion title="How do I set up confirmation and reminder emails?">
+    Go to **Settings → Scheduler → Email Sequences**. From here you can edit the confirmation email that fires immediately after booking, and add follow-up emails at any interval before the call — for example, 24 hours before and 1 hour before. Each email can include the prospect's name, appointment time, and a calendar link.
+  </Accordion>
+  <Accordion title="Can I send SMS reminders?">
+    Yes. Go to **Automation → Workflows** and create a new workflow with the trigger set to **Booking Created**. Add an SMS action and set the delay to **T-24h** for the first message and **T-1h** for the second. SMS reminders consistently outperform email for show rate because they are harder to ignore. Keep the messages short, personal, and direct — include the call time and a single reply option to confirm attendance.
+  </Accordion>
+  <Accordion title="How are no-shows logged?">
+    When a setter or closer attempts a call and the prospect does not answer, they disposition the call in the OSARC dialer — selecting **No Show** from the outcome list. OSARC marks the lead accordingly on the record and can trigger a re-booking workflow automatically: for example, sending a follow-up email with a new booking link 30 minutes after the missed call time.
+  </Accordion>
+  <Accordion title="Can I assign calls to specific setters or closers?">
+    Yes. Under **Scheduler → Assignment Rules**, you can round-robin bookings across your team, assign all calls from a specific funnel to a specific setter, or use availability-based routing so calls only go to team members who are on shift.
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  Speed to lead is one of the biggest drivers of show rate. The faster a setter calls a new booking, the more likely the prospect is to show up — and to be in a receptive mindset when they do. Aim to have a setter reach out to every new booking within five minutes. OSARC's dialer queue and shift tracker are designed to make that the default, not the exception.
+</Tip>

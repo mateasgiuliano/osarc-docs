@@ -1,0 +1,78 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "OSARC",
+  "theme": "luma",
+  "favicon": "https://media.brand.dev/453ad334-3170-47b2-a593-0a16d79b27b7.svg",
+  "colors": {
+    "primary": "#2383e2",
+    "light": "#191919",
+    "dark": "#848484"
+  },
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "label": "Sign In",
+      "href": "https://osarc.ai"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "pilot-programme"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/unified-platform",
+              "concepts/attribution",
+              "concepts/ai-intelligence"
+            ]
+          },
+          {
+            "group": "Funnels & Lead Capture",
+            "pages": [
+              "funnels/funnel-builder",
+              "funnels/video-hosting",
+              "funnels/application-forms",
+              "funnels/scheduler"
+            ]
+          },
+          {
+            "group": "Sales Floor",
+            "pages": [
+              "sales/crm",
+              "sales/dialer",
+              "sales/lead-management",
+              "sales/shift-tracker"
+            ]
+          },
+          {
+            "group": "Analytics & Reporting",
+            "pages": [
+              "analytics/dashboard",
+              "analytics/ad-attribution",
+              "analytics/vsl-analytics",
+              "analytics/team-performance"
+            ]
+          },
+          {
+            "group": "Automation & Workflows",
+            "pages": [
+              "automation/workflows",
+              "automation/email",
+              "automation/meta-integration"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

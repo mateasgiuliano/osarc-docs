@@ -1,0 +1,62 @@
+---
+title: "Build, Publish, and Optimise Sales Funnels in OSARC"
+sidebarTitle: "Funnel Builder"
+description: "Create multi-step sales funnels natively in OSARC. Every page view, video watch, and form submission feeds directly into your CRM and attribution system."
+---
+
+OSARC's funnel builder creates all the pages in your call funnel — opt-in pages, VSL pages, application pages, thank-you pages — and connects them directly to your CRM, dialer, and attribution system. Because every tool lives on the same database, a visitor who lands on your opt-in page, watches your VSL, fills out your application, and books a call is tracked as a single continuous record, with no third-party integrations required.
+
+## Creating Your First Funnel
+
+<Steps>
+  <Step title="Open the Funnels section">
+    Go to **Funnels** in the left navigation.
+  </Step>
+  <Step title="Create a new funnel">
+    Click **New Funnel** and choose a template: **VSL Funnel**, **Webinar Funnel**, or **Blank**. Templates pre-populate the recommended page sequence for your funnel type.
+  </Step>
+  <Step title="Add your pages">
+    Build out your page sequence: opt-in, VSL, application, and confirmation. You can reorder pages by dragging them in the funnel map view.
+  </Step>
+  <Step title="Connect your form and scheduler">
+    Link your application form to the application page and your scheduler to the confirmation page. OSARC will automatically pass lead data between them.
+  </Step>
+  <Step title="Publish your funnel">
+    Click **Publish** to make your funnel live. OSARC generates a hosted URL instantly. You can also connect a custom domain under **Settings → Domains**.
+  </Step>
+</Steps>
+
+## Funnel Page Types
+
+Every funnel is built from a sequence of purpose-built page types. Each type is designed for a specific job in your call funnel.
+
+<CardGroup cols={2}>
+  <Card title="Opt-In Page" icon="envelope">
+    Captures a prospect's name and email address or phone number. This is typically the first page in your funnel and the entry point for your attribution tracking.
+  </Card>
+  <Card title="VSL Page" icon="play">
+    Hosts your Video Sales Letter and tracks per-minute engagement. Watch time, drop-off, and completion data feed directly into your analytics. See [Video Hosting](/funnels/video-hosting) for full details.
+  </Card>
+  <Card title="Application Page" icon="clipboard-list">
+    Embeds your application form so prospects answer qualifying questions before they can book a call. Every answer is stored on the lead record in your CRM.
+  </Card>
+  <Card title="Confirmation / Thank-You Page" icon="circle-check">
+    Shown after a prospect books a call. Typically displays your scheduler embed, a confirmation message, and next-step instructions to reduce no-shows.
+  </Card>
+</CardGroup>
+
+## How Funnels Connect to the Rest of OSARC
+
+OSARC tracks every visitor from the moment they land on your opt-in page. You don't configure any of this manually — it happens because your funnel, CRM, dialer, and attribution system all write to the same database.
+
+Here is what happens automatically as a prospect moves through your funnel:
+
+- **Opt-in page submission** creates a new lead record in the CRM, stamped with the traffic source, ad, and creative that brought the visitor in.
+- **VSL page view** attaches watch-time data to that same lead record, so you can filter your CRM by watch percentage at any time.
+- **Application form submission** adds every answer as a field on the lead record. No data entry. No Zapier.
+- **Booking** triggers an instant setter notification, fires a confirmation email to the prospect, and places the lead in the dialer queue for the upcoming shift.
+- **Attribution events** — including cash collected — are fired back to Meta as real pixel events, so your ad optimisation is based on revenue, not just leads.
+
+<Tip>
+  Keep your funnel steps minimal. Each additional click is a drop-off point. Most high-converting call funnels have three to four steps: opt-in → VSL → application → confirmation.
+</Tip>
