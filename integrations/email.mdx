@@ -1,0 +1,79 @@
+---
+title: "Email"
+description: "Connect your own email sending account so Mail, campaigns and workflows send from your domain."
+---
+
+OSARC sends email through **Resend**, an email delivery service. You bring your own Resend account and your own domain. Every email your business sends (from Mail, a contact card, a campaign or a workflow) leaves on your account and arrives from your address.
+
+Until this is connected, email from your business does not go out. OSARC never borrows another business's account to cover the gap.
+
+<Note>
+Owner only. It takes about 15 minutes, most of it waiting for your domain to verify.
+</Note>
+
+## What you need
+
+- A domain you own, for example `yourbusiness.com`.
+- Access to where that domain is managed (GoDaddy, Cloudflare, Namecheap, IONOS, Google Domains and so on).
+- A free Resend account.
+
+## Connect email
+
+<Steps>
+  <Step title="Create a Resend account">
+    Go to `resend.com` and sign up. The free plan is enough to start.
+  </Step>
+  <Step title="Add your domain in Resend">
+    In Resend, open **Domains** and click **Add domain**. Enter your domain.
+
+    <Tip>
+    Many businesses use a subdomain such as `mail.yourbusiness.com`. It keeps your sending reputation separate from your everyday inbox.
+    </Tip>
+  </Step>
+  <Step title="Copy the DNS records">
+    Resend shows a short list of records (usually TXT and MX). Open your domain provider, find **DNS settings**, and add each record exactly as Resend shows it.
+  </Step>
+  <Step title="Verify the domain">
+    Back in Resend, click **Verify**. It can take a few minutes, sometimes up to an hour. Wait until the domain shows **Verified**.
+  </Step>
+  <Step title="Create an API key">
+    In Resend, open **API Keys** and click **Create API key**. Give it a name like `OSARC` and choose **Full access**. Copy the key. It starts with `re_` and Resend only shows it once.
+  </Step>
+  <Step title="Paste it into OSARC">
+    In OSARC, open **Integrations**. Under **Sending identity**, find **Email sending** and click **Add**. Fill in:
+
+    - **Resend API key**: the key you just copied.
+    - **From address**: the address your emails arrive from, for example `team@yourbusiness.com`. It must be on the domain you verified.
+    - **From name** (optional): the name people see, for example your business name.
+
+    Click **Save**.
+  </Step>
+</Steps>
+
+The card's dot turns gold. Email from your business now sends from your own address.
+
+## Check it works
+
+Open a contact with your own email address, click **Email**, and send yourself a short message. It should arrive within a minute, from the address you set.
+
+## Changing or removing it
+
+Open **Email sending** and click **Edit**. Your stored key is never shown again. Leave the key field blank to keep it, or paste a new one to replace it.
+
+**Remove** stops email sending from your business straight away.
+
+## Troubleshooting
+
+| What you see | What to do |
+| --- | --- |
+| Card says **Still needed** | A required field is empty. Fill it and save. |
+| Emails do not arrive | Check the domain shows **Verified** in Resend, and that the from address is on that domain. |
+| Emails land in spam | Make sure every DNS record from Resend is added, including the optional one for DMARC. New domains build trust over the first few days. |
+| You lost the API key | Create a new one in Resend and paste it in. The old one can be deleted in Resend. |
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Mail" icon="envelope" href="/apps/mail">Sending and receiving email in OSARC.</Card>
+  <Card title="Set up your business" icon="rocket" href="/set-up-your-business">Everything an owner connects on day one.</Card>
+</CardGroup>

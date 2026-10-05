@@ -41,6 +41,7 @@
             "pages": [
               "index",
               "quickstart",
+              "set-up-your-business",
               "desktop",
               "how-osarc-works"
             ]
@@ -148,6 +149,7 @@
               "integrations/overview",
               "integrations/meta",
               "integrations/whatsapp",
+              "integrations/email",
               "integrations/payments",
               "integrations/calendars"
             ]
